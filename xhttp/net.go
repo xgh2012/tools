@@ -14,13 +14,13 @@ import (
 )
 
 //发送数据合并
-func CombineData(postData map[string]string) string {
+func CombineData(postData map[string]interface{}) string {
 	data := url.Values{}
 	for k, v := range postData {
 		if v == "" {
 			continue
 		}
-		data.Set(k, v)
+		data.Set(k, v.(string))
 	}
 	return data.Encode()
 }

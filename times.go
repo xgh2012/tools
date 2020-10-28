@@ -41,7 +41,7 @@ func GetFirstDateOfMonth(d time.Time) time.Time {
 	return GetZeroTime(d)
 }
 
-//获取传入的时间所在月份的最后一天，即某月最后一天的23:59:59。如传入time.Now(), 返回当前月份的最后一天0点时间。
+//获取传入的时间所在月份的最后一天，即某月最后一天的23:59:59。如传入time.Now(), 返回当前月份的最后一天23:59:59时间。
 func GetLastDateOfMonth(d time.Time) time.Time {
 	return GetFirstDateOfMonth(d).AddDate(0, 1, 0).Add(-1 * time.Second)
 }

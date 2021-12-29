@@ -31,7 +31,7 @@ func (t *AesTool) padding(src []byte) []byte {
 		return src
 	} else {
 		//填充数据
-		return append(src, bytes.Repeat([]byte{byte(0)}, paddingCount)...)
+		return append(src, bytes.Repeat([]byte{byte(paddingCount)}, paddingCount)...)
 	}
 }
 
